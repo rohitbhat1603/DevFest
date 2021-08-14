@@ -1460,19 +1460,20 @@ License Terms
 
 .left-college {
   margin-top:150px;
- 
+  margin-left:80px;
 }
 
 .right-college {
   margin-top:150px;
-  
-  
+  margin-right:890px;
+  margin-left:890px;
 }
 
 .last-left-college {
   margin-top:150px;
-  
+  margin-left:80px;
   margin-bottom:100px;
+  padding-bottom: 60px;
 }
 
 .hide {
@@ -1481,38 +1482,63 @@ License Terms
 
 .myDIV:hover + .hide {
   display: block;
+  margin-left:400px;
+}
+
+.myDIV2:hover + .hide {
+  display: block;
+  margin-left:-600px;
 }
 
 
-#butt-on-5 {
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper a{
+  display: block;
+  width: 150px;
+  height: 40px;
+  line-height: 2;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+  border: 2.5px solid black;
+  letter-spacing: 0;
+  text-align: center;
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
+  transition: all .35s;
 }
 
-#butt-on-5 a {
+.wrapper a span{
   position: relative;
-  transition: all .45s ease-Out;
+  z-index: 2;
 }
 
-#trans-late {
-  transform: rotate(50deg);
-  width: 100%;
-  height: 250%;
-  left: -200px;
-  top: -30px;
-  background: black;
+.wrapper a:after{
   position: absolute;
-  transition: all .3s ease-Out;
-}
-
-#butt-on-5:hover #trans-late {
+  content: "";
+  top: 0;
   left: 0;
+  width: 0;
+  height: 100%;
+  background: #ADFF2F;
+  transition: all .35s;
 }
 
-#butt-on-5:hover a {
-  color: yellow;
+.wrapper a:hover{
+  color: red;
 }
+
+.wrapper a:hover:after{
+  width: 100%;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
